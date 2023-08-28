@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sim</title>
+
     <style>
         * {
             margin: 0;
@@ -28,9 +29,14 @@
             width: 200px;
             border-radius: 15px;
             border: 2px solid #fff;
+            margin: 10px;
 
             cursor: pointer;
             transition: ease-in-out 0.3s;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .tituloPrincipal {
@@ -48,6 +54,18 @@
             justify-content: space-around;
             margin: 0 200px;
         }
+
+        @media screen and (max-width: 768px) {
+            .btn {
+                display: flex;
+                width: 100px;
+                font: 300 30px 'Poppins', sans-serif;
+            }
+            
+            .botoes {
+                display: flex;
+            }
+        }
     </style>
     <script>
         function sim() {
@@ -61,14 +79,14 @@
         }
 
         function posicao(min, max) {
-            return(Math.random()*(max-min+min))+"%"
+            return (Math.random() * (max - min + min)) + "%"
         }
     </script>
 </head>
 
 <body>
     <div class="titulo">
-        <h1 class="tituloPrincipal">Aceitas um fino?</h1>
+        <h1 class="tituloPrincipal">Aceitas?</h1>
     </div>
 
     <div class="botoes">
